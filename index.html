@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Friend?</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #fff0f5);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 1s;
+    }
+    .container {
+      max-width: 800px;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.5s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    h1 {
+      color: #ff1493;
+      font-size: 2.2em;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.1em;
+      color: #333;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 18px;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.1);
+      background-color: #ff85c1;
+    }
+    .emoji-bg {
+      font-size: 30px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="mainContainer">
+    <h1>Will you be my friend? 🥹💖</h1>
+    <div class="buttons">
+      <button id="yesBtn">Yes 💕</button>
+      <button id="noBtn">No 💔</button>
+    </div>
+  </div>
+
+  <script>
+    const main = document.getElementById('mainContainer');
+    const yesText = `
+      <h1>💖 Thank You for Being My Friend 💖</h1>
+      <p>Hey there! 🌸 I just wanted to say a huge THANK YOU for saying yes to being my friend! 🥹✨ 
+      It honestly means so much to me. Knowing that you’re open to sharing laughs, memories, 
+      and good vibes together makes my heart so happy 💫💞</p>
+
+      <p>Friendship isn’t just about chatting every day — it’s about knowing that there’s someone 
+      out there who truly gets you, supports you, and wants to grow alongside you 🌱🤗 
+      I already feel lucky to have crossed paths with such a wonderful person like you! 💐</p>
+
+      <p>I promise to be the kind of friend who listens, cheers you on, and stands by you 
+      through every high and low 💪❤️ Life’s journey is always better with amazing people 
+      beside us — and now, that includes YOU! 🌈💫</p>
+
+      <p>So here’s to new memories, endless laughter, deep talks, and a friendship that keeps 
+      shining brighter every day 🌟🥳 Thank you again for saying yes — it really means the 
+      world to me! 💕</p>
+
+      <p>With all my gratitude and good vibes,<br>Your new friend 😄💌💫</p>
+      <div class="emoji-bg">🌸💐🌈💞🥰🌻✨💫🌟🎉🌺</div>
+    `;
+
+    const noText = `
+      <h1>💔 Thank You Anyway 💔</h1>
+      <p>Hey there 🌸 I just wanted to take a moment to say thank you — even though you said no 
+      to being friends, I still truly appreciate your honesty and the time you took to respond 🙏💫 
+      It takes courage to be clear and genuine, and I respect that deeply 💐</p>
+
+      <p>Of course, I feel a little sad 😔 because I really thought we could share some good moments, 
+      laughs, and kindness together 💭 But I completely understand that friendship is something 
+      that can’t be forced — it has to come naturally 🌿 And that’s okay 💖</p>
+
+      <p>I still wish you nothing but the best in everything you do 🌈✨ May your days be filled 
+      with happiness, peace, and good people who make your heart smile 🦋 Even though we may 
+      not be friends, I’ll always send good vibes your way and hope life treats you kindly 🌻💞</p>
+
+      <p>Sometimes, even when things don’t go how we hoped, they still teach us something beautiful — 
+      about patience, understanding, and gratitude 💫 So, thank you for being honest, and for 
+      reminding me that every answer — even a “no” — can come with kindness and respect 💌</p>
+
+      <p>Wishing you all the love, luck, and light in the world 🌟💖</p>
+      <p>With appreciation and a gentle smile,<br>Someone who still wishes you well 😊💫🌸</p>
+      <div class="emoji-bg">😢💔🌧️🖤🥀💭😞💫</div>
+    `;
+
+    document.getElementById('yesBtn').addEventListener('click', () => {
+      document.body.style.background = 'linear-gradient(135deg, #ffe6f2, #ffcce0, #ffd6eb)';
+      main.innerHTML = yesText;
+    });
+
+    document.getElementById('noBtn').addEventListener('click', () => {
+      document.body.style.background = 'linear-gradient(135deg, #b0b0b0, #d3d3d3, #f0f0f0)';
+      main.innerHTML = noText;
+    });
+  </script>
+</body>
+</html>
